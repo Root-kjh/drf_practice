@@ -1,10 +1,10 @@
-from .views import CategoryViewSet, ObjectViewSet, ReviewViewSet
+from .views import CategoryViewSet, ItemViewSet, ReviewViewSet
 from rest_framework import routers
 from django.urls import path, include
 
 router = routers.DefaultRouter()
 router.register(r'categories', CategoryViewSet)
-router.register(r'objects', ObjectViewSet)
+router.register(r'items', ItemViewSet)
 router.register(r'reviews', ReviewViewSet)
 
 urlpatterns = [
