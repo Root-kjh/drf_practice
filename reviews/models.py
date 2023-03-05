@@ -10,8 +10,8 @@ class Category(models.Model):
 class Object(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    description = models.TextField()
-    image = models.ImageField(upload_to='images/')
+    description = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to='images/', null=True)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -19,10 +19,7 @@ class Object(models.Model):
 
 class Review(models.Model):
     object = models.ForeignKey(Object, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    review = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
+    context = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
