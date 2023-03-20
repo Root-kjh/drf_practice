@@ -39,6 +39,18 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-debug-toolbar"
+version = "3.8.1"
+description = "A configurable set of panels that display various debug information about the current request/response."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+django = ">=3.2.4"
+sqlparse = ">=0.2"
+
+[[package]]
 name = "django-extensions"
 version = "3.2.1"
 description = "Extensions for Django"
@@ -99,12 +111,13 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "005b569eb74a49a826ea2f8ad22c1fe872c8f82a249603a8e10d8e8fb516dc51"
+content-hash = "1019226bc1f086549bb68f214320c5a3e1471fbef902e1d14f39715e1afb7456"
 
 [metadata.files]
 asgiref = []
 "backports.zoneinfo" = []
 django = []
+django-debug-toolbar = []
 django-extensions = []
 django-test-plus = []
 djangorestframework = []
